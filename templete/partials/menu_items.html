@@ -1,3 +1,5 @@
+{% load static %}
+
 <div class="menu_box">
     {% for j in items %}
       <div class="box fade-in" data-category="{{ j.category }}">
@@ -18,3 +20,43 @@
     {% endfor %}
   </div>
   
+
+
+
+
+
+
+    <nav>
+        <div class="nav">
+          <div class="left_nav">
+            <img src="{% static 'images/Logo.png' %}" alt="Cheffest Logo">
+          </div>
+      
+          <!-- LOGIN ICON (Always Visible) -->
+          <div class="login">
+            <a href="{% url 'login_redirect' %}">
+              <i class="ri-user-fill"></i>
+            </a>
+          </div>
+      
+          <!-- MENU ICON (Only Mobile) -->
+          <div class="res_menu">
+            <i class="ri-menu-3-line"></i>
+          </div>
+        </div>
+      </nav>
+      
+      <!-- OFF-CANVAS MOBILE MENU -->
+      <div class="mobile_menu">
+        <div class="mobile_menu_content">
+          <span class="close_menu">&times;</span>
+          <a href="/">Welcome</a>
+          <a href="/about">About</a>
+          <a href="/menu">Our Menu</a>
+          <a href="/order">Order Now</a>
+          <form action="/menu" method="get">
+            <input type="text" name="q" placeholder="Search items...">
+            <button type="submit"><i class="ri-search-eye-line"></i></button>
+          </form>
+        </div>
+      </div>

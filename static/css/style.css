@@ -91,7 +91,7 @@ footer{
  
 }
 .footer{
-max-width: 1300px;
+max-width: 1200px;
 margin: 0 auto;
    
 }
@@ -146,7 +146,7 @@ footer .line{
 }
 .bot_foot{
   display: flex;
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 10px 0;
   margin-top: 2vh;
@@ -388,6 +388,7 @@ text-decoration: none;
   color: #fff;
   display: flex;
 
+
   gap: 7vh;
   flex-direction: column;
   justify-content: center;
@@ -406,6 +407,7 @@ text-decoration: none;
   justify-content: space-between;
   gap: 10vw;
 }
+
 .box1 .num{
   font-size: 3vw;
   text-align: center;
@@ -545,79 +547,9 @@ font-size: 2.5vw;
   width: 120px;
 }
 
-@media (max-width: 890px) {
-  .logo {
-  right: -10px;
-  bottom: -20px;
-}
-  
- .logo img {
-  width: 80px;
-  }
-}
 
-@media (max-width: 850px) {
-  main {
-    width: 500px;
-  }
 
-  .slide-row {
-    width: 2000px;
-  }
 
-  .slide-col {
-    width: 500px;
-    height: 250px;
-  }
-
-  .hero img {
-    width: 200px;
-  }
-
-  .content4 {
-    width: 320px;
-    height: 200px;
-    padding: 20px;
-  }
-
-  .content4 p {
-    font-size: 0.9rem;
-  }
-
-  .content4 h2 {
-    font-size: 1.2rem;
-    margin-top: 20px;
-  }
-}
-
-@media (max-width: 550px) {
-  main {
-    width: 300px;
-  }
-
-  .slide-row {
-    width: 1200px;
-  }
-
-  .slide-col {
-    width: 500px;
-    height: 300px;
-  }
-
-  .hero4 {
-    top: 60%;
-    height: 100px;
-    z-index: 5;
-  }
-
-  .hero img {
-    width: 100px;
-  }
-
-  .content4 {
-    width: 300px;
-  }
-}
 .testimonail{
   
   margin: 0px auto;
@@ -628,7 +560,7 @@ font-size: 2.5vw;
   justify-content: center;
 }
 .slider{
-  margin-top: 10vh;
+  margin-top: 15vh;
 }
 /* hover */
 .button:hover{
@@ -883,16 +815,16 @@ text-decoration: none;
  font-size:20px;
 }
 .login{
- border:1px solid #fff;
- border-radius:50%;
- width:35px;
- height:35px;
- display:flex;
- align-items:center;
- justify-content:center;
- transition:all ease 0.3s;
- 
-}
+  border:1px solid #fff;
+  border-radius:50%;
+  width:35px;
+  height:35px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:all ease 0.3s;
+  
+ }
 .login:hover{
 background-color: #007bff; 
  scale:1.1
@@ -1096,4 +1028,120 @@ font-weight: 500;  cursor: pointer;
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+.res_menu{
+  display: none;
+}
+.right_nav,
+.nav_search,
+.login {
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Main Layout */
+
+
+/* Login Icon (Always Show) */
+
+
+/* Menu Icon (Only Mobile) */
+.res_menu {
+  display: none;
+  color: white;
+  font-size: 30px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+/* Sidebar Menu */
+.mobile_menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  z-index: 999;
+  transition: right 0.3s ease;
+  padding: 30px 20px;
+}
+
+.mobile_menu.active {
+  right: 0;
+}
+
+.mobile_menu_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: poppins;
+  gap: 20px;
+}
+
+.mobile_menu_content a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.mobile_menu_content form {
+  display: flex;
+  gap: 10px;
+}
+
+.mobile_menu_content input {
+  flex: 1;
+  padding: 8px;
+}
+
+.mobile_menu_content button {
+  background: none;
+  border: none;
+  color: white;
+}
+
+/* Close Button */
+.close_menu {
+  font-size: 24px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+
+.close_menu{
+  font-size: 45px;
+}
+.mobile_menu_content form{
+  border-radius: 30px;
+  border: 1px solid #ffffff62;
+  overflow: hidden;
+  width: 90%;
+
+}
+.mobile_menu_content form>input{
+  padding: 15px;
+  background-color: transparent;
+}
+.mobile_menu_content form>input::placeholder{
+  color: #fff;
+}
+.mobile_menu_content form>button{
+  font-size: 40px;
 }

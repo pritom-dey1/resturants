@@ -83,6 +83,29 @@ document.addEventListener("DOMContentLoaded", () => {
 // new
 // new 2
 
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.querySelector(".res_menu");
+    const mobileMenu = document.querySelector(".mobile_menu");
+    const closeMenu = document.querySelector(".close_menu");
+
+    menuIcon.addEventListener("click", function () {
+      mobileMenu.classList.add("active");
+    });
+
+    closeMenu.addEventListener("click", function () {
+      mobileMenu.classList.remove("active");
+    });
+  });
+
+  const menuLinks = document.querySelectorAll(".mobile_menu_content a");
+  menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+    });
+  });
+  
+
 const btns = document.querySelectorAll(".btn");
 const slideRow = document.getElementById("slide-row");
 const main = document.querySelector("main");

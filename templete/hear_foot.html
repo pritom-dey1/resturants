@@ -21,8 +21,8 @@
     <nav>
         <div class="nav">
             <div class="left_nav">
-                <img src="{%static 'images/Logo.png'%}" alt="">
-              
+<a href="/">                <img src="{%static 'images/Logo.png'%}" alt="">
+</a>              
             </div>
             <div class="right_nav">
                 <a href="/">Welcome</a>
@@ -48,13 +48,32 @@
               <div class="login">
                 <a href="{% url 'login_redirect' %}">
                     <i class="ri-user-fill"></i>
+                    
                 </a>
                 
+              </div>
+
+              <div class="res_menu">
+                <i class="ri-menu-3-line"></i>
               </div>
             
         </div>
         
     </nav>
+    <!-- OFF-CANVAS MOBILE MENU -->
+  <div class="mobile_menu">
+    <div class="mobile_menu_content">
+      <span class="close_menu""><i class="ri-close-large-fill"></i></span>
+      <a href="/">Welcome</a>
+      <a href="/about">About</a>
+      <a href="/menu">Our Menu</a>
+      <a href="/order">Order Now</a>
+      <form action="/menu" method="get">
+        <input type="text" name="q" placeholder="Search items...">
+        <button type="submit"><i class="ri-search-eye-line"></i></button>
+      </form>
+    </div>
+  </div>
     
     {% block main %}
         
